@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+
+    <style>
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    max-width: 200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(236, 20, 5, 0.889);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-top: 100px;
+    padding-bottom: 25px;
+    color: rgb(211, 11, 11);
+}
+
+label {
+    display:contents;
+    margin-bottom: 100px;
+}
+
+#alert{
+     color: #d61a05;
+     padding-bottom: 20px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c378f6dd;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    background-color: #9e230d;
+    color: #fff;
+    border: rgb(185, 30, 187);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2acb0e;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <style> </style>
+    <center>
+    <h1>LOGIN PAGE</h1>
+    <font color="red"${errormessage}> </font>
+    <form th:action="register" method="post">
+        
+        <label for="ename">Empname:</label>
+        <input type="text"  id="ename" name="ename" required><br>
+        <label for=""></label>
+        <label for="password">Password:</label>
+        <input type="password" id="passwrd" name="passwrd" required><br>
+        <div id="alert">
+            <label for="popup"  id="alert">  </label>
+
+        </div>
+       
+        <button onclick="user1()">Submit</button><br>
+
+       
+    
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+    </center>
+
+     <Script>
+
+   function user1() {
+  var user = document.getElementById('ename').value
+  var pass = document.getElementById('passwrd').value
+  var alert=document.getElementById('alert')
+  if (user == "hariprasath" && pass == "1234") {
+    alert.textContent = 'correct username and password';
+  } else {
+    alert.textContent ='incorrect username or password';
+   
+  }  
+   
+}
+
+    </Script>
+</body>
+</html>
